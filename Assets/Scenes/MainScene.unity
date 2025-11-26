@@ -3577,8 +3577,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.55647486, y: -0.52794474, z: -0.441575, w: 0.46542627}
-  m_LocalPosition: {x: 0.007469574, y: 0.0058861077, z: 0.019046288}
+  m_LocalRotation: {x: -0.0005750719, y: 0.9992741, z: -0.016799178, w: -0.03418765}
+  m_LocalPosition: {x: 0.0037517166, y: 0.018694764, z: 0.0077502783}
   m_LocalScale: {x: 0.009999998, y: 0.009999996, z: 0.010000003}
   m_Children: []
   m_Father: {fileID: 964186403}
@@ -6646,10 +6646,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 820114260728642664, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 820114260728642664, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 820114260728642664, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 820114260728642664, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 820114260728642664, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 820114260728642664, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.3
+      value: 60.4
       objectReference: {fileID: 0}
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
@@ -6664,7 +6694,7 @@ PrefabInstance:
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
@@ -6674,12 +6704,12 @@ PrefabInstance:
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
@@ -6701,10 +6731,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8004010673988739644, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_Name
       value: Toyota Supra MK5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826089064255110191, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0124
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf572778e948c04e9686446928a6539, type: 3}
