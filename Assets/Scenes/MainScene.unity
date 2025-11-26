@@ -6734,7 +6734,22 @@ PrefabInstance:
     - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: moveSpeed
-      value: 50
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: steerAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: traction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8004010673988739644, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
