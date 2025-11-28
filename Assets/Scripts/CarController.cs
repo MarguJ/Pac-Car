@@ -1,29 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public float moveSpeed = 50;
-    public float maxSpeed = 15;
-    public float drag = 0.98f;
-    public float steerAngle = 20;
-    public float traction = 1;
+    public float carSpeed;
+    public float carRotationSpeed; 
+    public float maxVelocity;
 
-    private Vector3 moveForce;
-    void Update()
+    private Rigidbody rb;
+
+    private void Start()
     {
-        moveForce += transform.forward * moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime * -1;
-        transform.position += moveForce * Time.deltaTime;
+        rb = GetComponent<Rigidbody>();
+    }
 
-        float steerInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up * steerInput * moveForce.magnitude * steerAngle * Time.deltaTime);
+    private void FixedUpdate()
+    {
+        if (rb.velocity.magnitude < maxVelocity)
+        {
+            float moveVertical = Input.GetAxis("Vertical");
+            rb.AddForce(moveVertical * carSpeed * transform.forward, ForceMode.Force);
+        }
         
-        moveForce *= drag;
-        moveForce = Vector3.ClampMagnitude(moveForce, maxSpeed);
-
-        Debug.DrawRay(transform.position, moveForce.normalized * 3);
-        Debug.DrawRay(transform.position, transform.forward * 3, Color.blue);
-        moveForce = Vector3.Lerp(moveForce.normalized, transform.forward, traction * Time.deltaTime) * moveForce.magnitude;
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        
+        float speedFactor = rb.velocity.magnitude / maxVelocity;
+        
+        float rotationAmount = moveHorizontal * carRotationSpeed * speedFactor;
+        
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotationAmount, 0f));
     }
 }
+
