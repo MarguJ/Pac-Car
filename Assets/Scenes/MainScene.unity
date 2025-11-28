@@ -844,6 +844,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 85181134}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &87093906 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7545244398170557309, guid: 7cf572778e948c04e9686446928a6539,
+    type: 3}
+  m_PrefabInstance: {fileID: 964186402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &92859811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d34e8533c8de8ec45869f9144584d929,
@@ -6564,6 +6570,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184194439, guid: 7cf572778e948c04e9686446928a6539, type: 3}
+      propertyPath: cam2
+      value: 
+      objectReference: {fileID: 1132248099}
+    - target: {fileID: 184194439, guid: 7cf572778e948c04e9686446928a6539, type: 3}
+      propertyPath: cam1
+      value: 
+      objectReference: {fileID: 87093906}
     - target: {fileID: 1145031030094575537, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6627,7 +6641,7 @@ PrefabInstance:
     - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: carRotationSpeed
-      value: 70
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
@@ -7540,6 +7554,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4f32dfddb033d3e40b5841bc53cc1689,
     type: 3}
   m_PrefabInstance: {fileID: 435289675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1132248099 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 183742619839048081, guid: 7cf572778e948c04e9686446928a6539,
+    type: 3}
+  m_PrefabInstance: {fileID: 964186402}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1135366460
 PrefabInstance:
