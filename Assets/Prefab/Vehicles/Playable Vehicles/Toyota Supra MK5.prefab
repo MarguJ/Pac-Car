@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 3949628834227227044}
   m_Layer: 0
   m_Name: Toyota Supra MK5
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,9 +423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb00788e672b854dad8f19a5b2480aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 0
-  carRotationSpeed: 0
-  maxVelocity: 0
+  carSpeed: 30
+  carRotationSpeed: 5
+  maxVelocity: 50
 --- !u!114 &184194439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,8 +438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd063d07994a9145b685429852517a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam1: {fileID: 0}
-  cam2: {fileID: 0}
+  cam1: {fileID: 7545244398170557309}
+  cam2: {fileID: 183742619839048081}
 --- !u!54 &2654651458192152525
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8004010673988739644}
-  m_Material: {fileID: 13400000, guid: 2172ffb44076a3f4c9af7c59f2f9c6eb, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -482,7 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: b4256e9c197bc484a93034bd6e35fd14, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.000000009599309
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: b4256e9c197bc484a93034bd6e35fd14, type: 3}
       propertyPath: m_LocalPosition.y
@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: b4256e9c197bc484a93034bd6e35fd14, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.065400094
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: b4256e9c197bc484a93034bd6e35fd14, type: 3}
       propertyPath: m_LocalRotation.x
