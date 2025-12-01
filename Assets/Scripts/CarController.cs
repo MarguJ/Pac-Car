@@ -32,5 +32,10 @@ public class CarController : MonoBehaviour
         
         rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotationAmount, 0f));
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        
+    }
 }
 
