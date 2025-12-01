@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
@@ -87,5 +88,19 @@ public class EnemyCarScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(Shock());
+        }
+    }
+
+    private IEnumerator Shock()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        targeted = true;
     }
 }

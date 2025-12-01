@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CarController : MonoBehaviour
     public float maxVelocity;
 
     private Rigidbody rb;
+    private bool controlsLocked = false;
 
     private void Start()
     {
@@ -18,24 +20,27 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rb.velocity.magnitude < maxVelocity)
+        if (!controlsLocked)
         {
-            float moveVertical = Input.GetAxis("Vertical");
-            rb.AddForce(moveVertical * carSpeed * transform.forward, ForceMode.Force);
-        }
+            if (rb.velocity.magnitude < maxVelocity)
+            {
+                float moveVertical = Input.GetAxis("Vertical");
+                rb.AddForce(moveVertical * carSpeed * transform.forward, ForceMode.Force);
+            }
         
-        float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveHorizontal = Input.GetAxis("Horizontal");
         
-        float speedFactor = rb.velocity.magnitude / maxVelocity;
+            float speedFactor = rb.velocity.magnitude / maxVelocity;
         
-        float rotationAmount = moveHorizontal * carRotationSpeed * speedFactor;
+            float rotationAmount = moveHorizontal * carRotationSpeed * speedFactor;
         
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotationAmount, 0f));
-    }
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotationAmount, 0f));
 
-    void OnCollisionEnter(Collision collision)
-    {
-        
+            if (gameObject.transform.position.y < -30)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
     }
 }
 
