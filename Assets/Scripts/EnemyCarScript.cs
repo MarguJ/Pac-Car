@@ -24,6 +24,7 @@ public class EnemyCarScript : MonoBehaviour
     [SerializeField] private float chaseSpeed = 20;
     [SerializeField] private float chaseSteer = 400;
     [SerializeField] private float chaseAcceleration = 40;
+    [SerializeField] private float crashForce = 10;
     
     private Transform player;
     private int currentPointIndex = 0;

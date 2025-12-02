@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class CarController : MonoBehaviour
 {
     public float carSpeed;
-    public float carRotationSpeed; 
+    public float carRotationSpeed;
+    public float carGravity;
     public float maxVelocity;
 
     private Rigidbody rb;
@@ -22,17 +23,28 @@ public class CarController : MonoBehaviour
     {
         if (!controlsLocked)
         {
+            float moveVertical = Input.GetAxis("Vertical");
             if (rb.velocity.magnitude < maxVelocity)
             {
-                float moveVertical = Input.GetAxis("Vertical");
                 rb.AddForce(moveVertical * carSpeed * transform.forward, ForceMode.Force);
             }
+            
+            rb.AddForce(0, -carGravity, 0 ,ForceMode.Force);
         
             float moveHorizontal = Input.GetAxis("Horizontal");
         
             float speedFactor = rb.velocity.magnitude / maxVelocity;
-        
-            float rotationAmount = moveHorizontal * carRotationSpeed * speedFactor;
+
+            if (moveVertical < 0)
+            {
+                moveHorizontal *= -1;
+            }
+            else if (moveHorizontal == 0)
+            {
+                moveHorizontal = 0;
+            }
+            
+            float rotationAmount = carRotationSpeed * speedFactor * moveHorizontal;
         
             rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotationAmount, 0f));
 

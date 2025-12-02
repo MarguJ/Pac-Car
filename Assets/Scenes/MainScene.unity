@@ -10565,12 +10565,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1681063148648827731, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: carGravity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3949628834227227044, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 2172ffb44076a3f4c9af7c59f2f9c6eb,
-        type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949628834227227044, guid: 7cf572778e948c04e9686446928a6539,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8004010673988739644, guid: 7cf572778e948c04e9686446928a6539,
         type: 3}
       propertyPath: m_Name
@@ -23298,7 +23307,7 @@ PrefabInstance:
     - target: {fileID: 1962918450306783617, guid: 1af0a2c8773f85c40bdb120f32cd8a8a,
         type: 3}
       propertyPath: chaseSpeed
-      value: 22.5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1962918450306783617, guid: 1af0a2c8773f85c40bdb120f32cd8a8a,
         type: 3}
