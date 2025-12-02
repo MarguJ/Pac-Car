@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using UnityEditor.Experimental.UIElements;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
@@ -30,6 +31,7 @@ public class EnemyCarScript : MonoBehaviour
     private int currentPointIndex = 0;
     private NavMeshAgent agent;
     private bool targeted;
+    private Rigidbody rb;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
